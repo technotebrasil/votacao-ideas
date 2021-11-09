@@ -28,7 +28,7 @@
                             <div>&bull;</div>
                             <div>{{ $idea->category->name }}</div>
                             <div>&bull;</div>
-                            <div class="text-gray-900">{{ $idea->comments()->count() }} comments</div>
+                            <div class="text-gray-900">{{ $idea->comments()->count() }} comentários</div>
                         </div>
                         <div
                             class="flex items-center space-x-2 mt-4 md:mt-0"
@@ -60,7 +60,7 @@
                                             "
                                             class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
                                         >
-                                            Edit Idea
+                                            Editar Reclamação
                                         </a>
                                     </li>
                                     @endcan
@@ -75,7 +75,7 @@
                                             "
                                             class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
                                         >
-                                            Delete Idea
+                                            Deletar Reclamação
                                         </a>
                                     </li>
                                     @endcan
@@ -89,7 +89,7 @@
                                             "
                                             class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
                                         >
-                                            Mark as Spam
+                                            Marcar como Spam
                                         </a>
                                     </li>
 
@@ -104,7 +104,7 @@
                                                 "
                                                 class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
                                             >
-                                                Not Spam
+                                                Não é Spam
                                             </a>
                                         </li>
                                         @endif
@@ -124,14 +124,14 @@
                                     wire:click.prevent="vote"
                                     class="w-20 bg-blue text-white border border-blue font-bold text-xxs uppercase rounded-xl hover:bg-blue-hover transition duration-150 ease-in px-4 py-3 -mx-5"
                                 >
-                                    Voted
+                                    Votada
                                 </button>
                             @else
                                 <button
                                     wire:click.prevent="vote"
                                     class="w-20 bg-gray-200 border border-gray-200 font-bold text-xxs uppercase rounded-xl hover:border-gray-400 transition duration-150 ease-in px-4 py-3 -mx-5"
                                 >
-                                    Vote
+                                    Votar
                                 </button>
                             @endif
                         </div>
@@ -152,7 +152,7 @@
             <div class="hidden md:flex items-center space-x-3">
                 <div class="bg-white font-semibold text-center rounded-xl px-3 py-2">
                     <div class="text-xl leading-snug @if($hasVoted) text-blue @endif">{{ $votesCount }}</div>
-                    <div class="text-gray-400 text-xs leading-none">Votes</div>
+                    <div class="text-gray-400 text-xs leading-none">Votos</div>
                 </div>
                 @if ($hasVoted)
                     <button
@@ -160,7 +160,7 @@
                         wire:click.prevent="vote"
                         class="w-32 h-11 text-xs bg-blue text-white font-semibold uppercase rounded-xl border border-blue hover:bg-blue-hover transition duration-150 ease-in px-6 py-3"
                     >
-                        <span>Voted</span>
+                        <span>Votada</span>
                     </button>
                 @else
                     <button
@@ -168,7 +168,7 @@
                         wire:click.prevent="vote"
                         class="w-32 h-11 text-xs bg-gray-200 font-semibold uppercase rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-6 py-3"
                     >
-                        <span>Vote</span>
+                        <span>Votar</span>
                     </button>
                 @endif
             </div>

@@ -10,7 +10,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
 
-        <title>{{ $title ?? 'Laracasts Voting' }}</title>
+        <title>{{ $title ?? 'Fiscaliza RP' }}</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
@@ -24,7 +24,7 @@
     </head>
     <body class="font-sans bg-gray-background text-gray-900 text-sm">
         <header class="flex flex-col md:flex-row items-center justify-between px-8 py-4">
-            <a href="/"><img src="{{ asset('img/logo.svg') }}" alt="logo"></a>
+            <a href="/"><img src="{{ asset('img/logo_fiscalizarp.png') }}" alt="logo">Fiscaliza RP</a>
             <div class="flex items-center mt-2 md:mt-0">
                 @if (Route::has('login'))
                     <div class="px-6 py-4">
@@ -43,10 +43,10 @@
                                 <livewire:comment-notifications />
                             </div>
                         @else
-                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
 
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Cadastre-se</a>
                             @endif
                         @endauth
                     </div>
@@ -72,12 +72,12 @@
                     "
                 >
                     <div class="text-center px-6 py-2 pt-6">
-                        <h3 class="font-semibold text-base">Add an idea</h3>
+                        <h3 class="font-semibold text-base">Add uma reclamação</h3>
                         <p class="text-xs mt-4">
                             @auth
-                                Let us know what you would like and we'll take a look over!
+                                Mande a sua reclamação para nossa análise.
                             @else
-                                Please login to create an idea.
+                                Faça o login para enviar uma reclamação.
                             @endauth
                         </p>
                     </div>
