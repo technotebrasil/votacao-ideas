@@ -2,7 +2,7 @@
     @auth
         <form wire:submit.prevent="createIdea" action="#" method="POST" class="space-y-4 px-4 py-6">
             <div>
-                <input wire:model.defer="title" type="text" class="w-full text-sm bg-gray-100 border-none rounded-xl placeholder-gray-900 px-4 py-2" placeholder="Your Idea" required>
+                <input wire:model.defer="title" type="text" class="w-full text-sm bg-gray-100 border-none rounded-xl placeholder-gray-900 px-4 py-2" placeholder="Reclamação" required>
                 @error('title')
                     <p class="text-red text-xs mt-1">{{ $message }}</p>
                 @enderror
@@ -18,7 +18,7 @@
                 <p class="text-red text-xs mt-1">{{ $message }}</p>
             @enderror
             <div>
-                <textarea wire:model.defer="description" name="idea" id="idea" cols="30" rows="4" class="w-full bg-gray-100 rounded-xl border-none placeholder-gray-900 text-sm px-4 py-2" placeholder="Describe your idea" required></textarea>
+                <textarea wire:model.defer="description" name="idea" id="idea" cols="30" rows="4" class="w-full bg-gray-100 rounded-xl border-none placeholder-gray-900 text-sm px-4 py-2" placeholder="Descrição da reclamação" required></textarea>
                 @error('description')
                     <p class="text-red text-xs mt-1">{{ $message }}</p>
                 @enderror
